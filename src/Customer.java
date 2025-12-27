@@ -11,7 +11,6 @@ public class Customer {
         this.balance = 0.0;
         this.premiumMember = false;
     }
-
     public Customer(String name, int age, double balance, boolean premiumMember) {
         this.name = name;
         this.age = age;

@@ -11,7 +11,6 @@ public class Main {
 
         jacket.applyDiscount(10);
         store.sellItem(jacket, customer);
-
         System.out.println("\nAfter purchase:");
         System.out.println(jacket);
         System.out.println(customer);
