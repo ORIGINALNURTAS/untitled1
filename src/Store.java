@@ -10,7 +10,6 @@ public class Store {
         this.totalSales = 0;
         this.open = true;
     }
-
     public Store(String storeName, String location, boolean open) {
         this.storeName = storeName;
         this.location = location;

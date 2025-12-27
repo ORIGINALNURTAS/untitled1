@@ -8,7 +8,6 @@ public class Main {
         System.out.println(jacket);
         System.out.println(customer);
         System.out.println(store);
-
         jacket.applyDiscount(10);
         store.sellItem(jacket, customer);
         System.out.println("\nAfter purchase:");

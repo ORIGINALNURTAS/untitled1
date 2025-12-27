@@ -5,7 +5,6 @@ public class ClothingItem {
     private String size;
     private double price;
     private boolean available;
-
     public ClothingItem() {
         this.name = "Unknown";
         this.brand = "No brand";

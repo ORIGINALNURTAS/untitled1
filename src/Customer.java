@@ -4,7 +4,6 @@ public class Customer {
     private int age;
     private double balance;
     private boolean premiumMember;
-
     public Customer() {
         this.name = "Guest";
         this.age = 18;
