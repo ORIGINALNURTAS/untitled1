@@ -4,7 +4,6 @@ public class Store {
     private String location;
     private int totalSales;
     private boolean open;
-
     public Store() {
         this.storeName = "Clothing Store";
         this.location = "Unknown";
@@ -41,7 +40,6 @@ public class Store {
     public void closeStore() {
         open = false;
     }
-
     @Override
     public String toString() {
         return "Store{name='" + storeName + "', location='" + location +

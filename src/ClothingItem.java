@@ -13,7 +13,6 @@ public class ClothingItem {
         this.price = 0.0;
         this.available = true;
     }
-
     public ClothingItem(String name, String brand, String size, double price, boolean available) {
         this.name = name;
         this.brand = brand;
@@ -59,7 +58,6 @@ public class ClothingItem {
     public boolean isAvailable() {
         return available;
     }
-
     public void setAvailable(boolean available) {
         this.available = available;
     }
