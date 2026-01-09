@@ -1,18 +1,49 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Clothing> items = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
 
-        ClothingItem jacket = new ClothingItem("Jacket", "Nike", "L", 120.0, true);
-        Customer customer = new Customer("Alex", 20, 150.0, true);
-        Store store = new Store("Urban Wear", "Almaty", true);
+        while (true) {
+            System.out.println("1 Add Shirt");
+            System.out.println("2 Add Pants");
+            System.out.println("3 View All");
+            System.out.println("0 Exit");
 
-        System.out.println(jacket);
-        System.out.println(customer);
-        System.out.println(store);
-        jacket.applyDiscount(10);
-        store.sellItem(jacket, customer);
-        System.out.println("\nAfter purchase:");
-        System.out.println(jacket);
-        System.out.println(customer);
-        System.out.println(store);
+            int choice = sc.nextInt();
+            if (choice == 0) break;
+
+            if (choice == 1) {
+                System.out.print("Name: ");
+                String name = sc.next();
+                System.out.print("Price: ");
+                double price = sc.nextDouble();
+                System.out.print("Size: ");
+                String size = sc.next();
+                System.out.print("Long sleeve (true/false): ");
+                boolean ls = sc.nextBoolean();
+                items.add(new Shirt(name, price, size, ls));
+            }
+
+            if (choice == 2) {
+                System.out.print("Name: ");
+                String name = sc.next();
+                System.out.print("Price: ");
+                double price = sc.nextDouble();
+                System.out.print("Size: ");
+                String size = sc.next();
+                System.out.print("Material: ");
+                String material = sc.next();
+                items.add(new Pants(name, price, size, material));
+            }
+
+            if (choice == 3) {
+                for (Clothing c : items) {
+                    System.out.println(c.info());
+                }
+            }
+        }
     }
 }
